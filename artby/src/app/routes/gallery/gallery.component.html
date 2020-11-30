@@ -1,0 +1,29 @@
+<nav>
+  <h1>Galleri</h1>
+  <ul>
+    <li>Abstract</li>
+    <li>Reality</li>
+    <li>People</li>
+    <li>Animals</li>
+  </ul>
+</nav>
+<div class="container">
+  <div *ngIf="collections.length > 0" class="row">
+    <div *ngFor="let product of collections" class="col-lg-3 col-md-4 col-sm-6 mb-4">
+      <app-product [data]="product"></app-product>
+    </div>
+    <div *ngIf="collections == 0">
+      <p>No products to display</p>
+    </div>
+  </div>
+</div>
+
+<!--<p>gallery works!</p>-->
+<!--<mat-card>-->
+<!--  <mat-card-header>-->
+<!--    Image Nr. 1-->
+<!--  </mat-card-header>-->
+<!--  <mat-card-content>-->
+<!--    <img src="http://loremflickr.com/300/150?random=3" alt="Girl in a jacket">-->
+<!--  </mat-card-content>-->
+<!--</mat-card>-->
